@@ -1,0 +1,17 @@
+<!-- Bad Code -->
+<a href="https://example.com">
+  <button>Example</button>
+</a>
+
+<!--
+Issues and how to fix them
+By nesting a button inside of a link, you’re sending two messages: this is a button, but also this is a link.
+-->
+
+<!-- Good Code -->
+<style>
+  .button {
+  /* use CSS to apply button-like styles to the link */
+}
+</style>
+<a href="https://example.com" class="button">Example</a>
