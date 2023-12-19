@@ -1,0 +1,19 @@
+<!-- Bad Code -->
+
+<a href="javascript:void(1)" onClick='window.location="index.html"'>Link</a>
+
+<!--
+Issues and how to fix them
+
+Links won't work, if JavaScript fails to load or execute.
+
+You don’t need JavaScript to link to other pages, you can use the href attribute for that. Browser support is pretty good (100% of all browsers).
+
+The context menu on right click is different, "Open in new tab/window" is not available.
+
+CMD + Click to open a link in the background won't work.
+
+-->
+
+<!-- Good Code -->
+<a href="index.html">Link</a>
