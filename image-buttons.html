@@ -1,0 +1,18 @@
+<!-- Bad Code -->
+<img src="/images/edit.gif" onclick="openEditDialog(123)">
+<img src="/images/delete.gif" onclick="openDeleteDialog(123)">
+
+<!--
+Issues and how to fix them
+- The purpose of the img element is to display images, not to execute JavaScript.
+- A click event on a img triggers only on click. A click event on a button triggers on click and if the user presses the Enter or Space key.
+- There’s no text alternative for the image. Screen readers may announce the filename instead.
+-->
+
+<!-- Good code -->
+<button onclick="openEditDialog(123)">
+  <img src="/images/edit.gif" alt="Edit product XY">
+</button>
+<button onclick="openDeleteDialog(123)">
+  <img src="/images/delete.gif" alt="Delete product XY">
+</button>
