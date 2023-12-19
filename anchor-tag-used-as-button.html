@@ -1,0 +1,15 @@
+<!-- Bad Code -->
+<a href="#" onclick="modal.open()">Login</a>
+
+<!--
+Issues and how to fix them
+
+If the a element has an href attribute, it represents a link to another resource like a page or a PDF document.
+
+The purpose of the element in this example is to trigger an action on the same page with JavaScript. The button element with the type button is more suitable because it has no default behaviour and it’s designed to trigger actions on user input.
+
+-->
+
+<!-- Good Code -->
+
+<button type="button" onclick="modal.open()">Login</button>
