@@ -1,0 +1,35 @@
+<!-- Bad Code -->
+<div tabindex="-1">
+  <div role="button">
+    <svg width="28" height="24"> … </svg>
+  </div>
+</div>
+
+<!--
+
+- Setting button semantics explicitly using the role attribute isn’t necessary, there’s an element for that (button)
+- You don’t need the tabindex attribute if you use a button. HTML buttons are focusable by default.
+- A click event on a div triggers only on click. A click event on a button triggers on click and if the user presses the Enter or Space key.
+
+-->
+
+<!-- Good Code -->
+
+<style>
+  .sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+</style>
+<button>
+  <span class="sr-only">Send</span>
+  <svg width="28" height="24" aria-hidden="true"> … </svg>
+</button>
