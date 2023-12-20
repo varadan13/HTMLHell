@@ -1,0 +1,22 @@
+<!-- Bad Code -->
+<input type="checkbox" id="accept" required>
+<label for="accept">
+  <a href="/legal"> I accept the confidentiality policy and data… </a>
+</label>
+
+<!--
+Issues and how to fix them
+
+It’s bad practice to nest elements with activation behavior (e.g. click).
+
+Users don’t expect a new page to open when they click a label.
+
+The ability to click a label provides usability and accessibility benefits (larger hit area).
+
+Place links outside the label element.
+-->
+
+<!-- Good Code -->
+<input type="checkbox" id="accept" required>
+<label for="accept"> I accept the confidentiality policy and data… </label>
+(read <a href="/legal">Terms and conditions</a>)
