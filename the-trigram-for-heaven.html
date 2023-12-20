@@ -1,0 +1,23 @@
+<!-- Bad Code -->
+<span class="nav-toggle"> ☰ Menu </span>
+
+<!--
+Issues and how to fix them
+
+A screen reader may announce this as trigram for heaven menu, because ☰ is the unicode character for the trigram for heaven.
+
+The purpose of the icon is decorative, it should be hidden from screen readers. Consider adding decorative images using background properties in CSS.
+
+A click event on a span triggers only on click. A click event on a button triggers on click and if the user presses the Enter or Space key.
+
+A span isn’t keyboard focusable, but this element must be focusable, because it’s used for opening and closing the main navigation.
+
+aria-expanded must be added to indicate wheather the main navigation is collapsed or not.
+
+-->
+
+<!-- Good Code -->
+
+<button class="nav-toggle" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menu
+</button>
